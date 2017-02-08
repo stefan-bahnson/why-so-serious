@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/stefan-bahnson/react-setup",
   "scripts": {
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors"
   },
   "author": "Stefan Bahnson <stefanbahnson@gmail.com>",
   "license": "ISC",

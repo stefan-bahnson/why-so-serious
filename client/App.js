@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom, { render } from 'react-dom';
 
 import '../sass/main.scss';
 
@@ -9,12 +8,14 @@ class App extends Component {
     super();
     this.state = {
       logo: 'Logo',
+      text: 'WHY SO SERIOUS?'
     }
   }
 
   handleClick() {
     this.setState({
-      logo: 'Joker INC.'
+      logo: 'Joker INC.',
+      text: 'IM NOT SERIOUS'
     });
   }
 
@@ -23,7 +24,6 @@ class App extends Component {
       <div className="App">
         <Header logo={ this.state.logo }/>
         <Hero text={ this.state.text }  clickCallback={ () => this.handleClick() }/>
-        <input type="text"/>
       </div>
     );
   }
@@ -42,10 +42,10 @@ const Header = ({ logo }) => (
   </div>
 );
 
-const Hero = ({ clickCallback }) => (
+const Hero = ({ text, clickCallback }) => (
   <div className="hero">
     <div className="container">
-      <h1 className="title">Why so serious?</h1>
+      <h1 className="title">{ text }</h1>
       <button onClick={() => clickCallback() }>DO MAGIC</button>
     </div>
   </div>
