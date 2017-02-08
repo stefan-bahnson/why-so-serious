@@ -8,14 +8,12 @@ class App extends Component {
     super();
     this.state = {
       logo: 'Logo',
-      text: 'WHY SO SERIOUS?'
     }
   }
 
   handleClick() {
     this.setState({
       logo: 'Joker INC.',
-      text: 'IM NOT SERIOUS'
     });
   }
 
@@ -23,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header logo={ this.state.logo }/>
-        <Hero text={ this.state.text }  clickCallback={ () => this.handleClick() }/>
+        <Hero clickCallback={ () => this.handleClick() }/>
       </div>
     );
   }
@@ -42,16 +40,11 @@ const Header = ({ logo }) => (
   </div>
 );
 
-const Hero = ({ text, clickCallback }) => (
+const Hero = ({ clickCallback }) => (
   <div className="hero">
     <div className="container">
-      <h1 className="title">{ text }</h1>
+      <h1 className="title">Why so serious?</h1>
       <button onClick={() => clickCallback() }>DO MAGIC</button>
     </div>
   </div>
-);
-
-render(
-  <App />,
-  document.getElementById('app')
 );

@@ -3,12 +3,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-h2.logo {
-  margin: 0;
-  float: left;
-  line-height: 3.3em;
-  color: hotpink;
-}
+
 
 .header {
   position: absolute;
@@ -18,9 +13,11 @@ h2.logo {
   padding: 0 32px;
   box-sizing: border-box;
 
+  h2.logo {
+    color: hotpink;
+  }
+
   nav {
-    float: right;
-    line-height: 5em;
     a {
       color: white;
       text-decoration: none;
@@ -46,7 +43,6 @@ h2.logo {
 
     .title {
       text-transform: uppercase;
-      //background-color: rgba(0, 0, 0, 0.7);
       padding: 32px;
       text-shadow: 2px 2px 4px #000;
       margin: 0;
